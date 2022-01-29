@@ -30,6 +30,9 @@ tab{
 #content{
 	min-height: 100vh;
 }
+#content .block{
+	position: relative;
+}
 #content .block video{
 	width: 100%;
 }
@@ -44,6 +47,9 @@ tab{
 #block1 .title-img{
 	width: 100%;
 	opacity: 0.7;
+}
+#block1 .title-img:nth-child(2){
+	display: none;
 }
 #block1 .title-text{
 	font-size: 20px;
@@ -80,6 +86,16 @@ tab{
 }
 #block1 .title-btn:hover{
 	color: #a8a8a8;
+}
+#header .special{
+	display: inline-block;
+	vertical-align: top;
+}
+#header .special-body{
+	display: none;
+}
+#header .special-menu{
+
 }
 #header .btn{
 	position: relative;
@@ -316,5 +332,65 @@ tab{
 	}
 	100%{
 		transform: translateX(0);
+	}
+}
+@media (max-width: 800px) {
+	#block1 .title-img:nth-child(1){
+		display: none;
+	}
+	#block1 .title-img:nth-child(2){
+		display: block;
+	}
+	#header .special{
+	
+	}
+	#header .special-body{
+		display: block;
+		position: relative;
+		width: 50px;
+		height: 50px;
+	}
+	#header .special-body .line{
+		position: absolute;
+		height: 3px;
+		width: 60%;
+		background-color: #aaa;
+		border-radius: 2px;
+		transition-duration: 200ms;
+	}
+	#header .special-body .line.top{
+		top: 20%;
+	}
+	#header .special-body .line.middle{
+		top: calc(50% - 1.5px);
+	}
+	#header .special-body .line.bottom{
+		bottom: 20%;
+	}
+	#header .special:hover .special-body .line.top{
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%) rotate(45deg);
+	}
+	#header .special:hover .special-body .line.middle{
+		transform: scaleX(0);
+	}
+	#header .special:hover .special-body .line.bottom{
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%) rotate(-45deg);
+	}
+	#header .special-menu{
+		position: absolute;
+		background-color: rgba(0, 0, 0, 0.8);
+		border-radius: 5px;
+		transform: translateY(-50%) scaleY(0);
+		transition-duration: 200ms;
+	}
+	#header .special:hover .special-menu{
+		transform: translateY(0); scaleY(1);
+	}
+	#header .special-menu .btn{
+		display: block;
 	}
 }
