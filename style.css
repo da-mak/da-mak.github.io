@@ -197,7 +197,7 @@ tab{
 	transform: translateY(0); scaleY(1);
 }
 #header .btn .menu .menu-btn{
-	color: #aaa;
+	color: #000;
 	font-size: 16px;
 }
 #header .btn .menu .menu-btn:hover{
@@ -316,6 +316,7 @@ tab{
 	max-width: 1200px;
 	text-align: center;
 	margin: auto;
+	ba
 }
 #block4 .gallery .gallery-box{
 	display: inline-block;
@@ -326,6 +327,7 @@ tab{
 	height: 300px;
 	box-shadow: 0 0 100px #000 inset;
 	transition-duration: 200ms;
+	animation: change-z-o 200ms;
 }
 #block4 .gallery .gallery-box::after{
 	content: "Genshin Impact Characters";
@@ -347,51 +349,54 @@ tab{
 }
 #block4 .gallery .gallery-box:hover{
 	box-shadow: 0 0 0px #000 inset;
+	transform: scale(1.1);
+	z-index: 1;
+	animation: change-z-i 200ms;
 }
 #block4 .gallery .gallery-box.img1{
 	background-image: url(img/super1.webp);
 }
 #block4 .gallery .gallery-box.img2{
-	background-image: url(img/super2.png);
+	background-image: url(img/Comprressed/super2.png);
 }
 #block4 .gallery .gallery-box.img3{
-	background-image: url(img/super3.jpg);
+	background-image: url(img/Comprressed/super3.png);
 }
 #block4 .gallery .gallery-box.img4{
-	background-image: url(img/super4.jpg);
+	background-image: url(img/Comprressed/super4.png);
 }
 #block4 .gallery .gallery-box.img5{
-	background-image: url(img/super5.png);
+	background-image: url(img/Comprressed/super5.png);
 }
 #block4 .gallery .gallery-box.img6{
 	background-image: url(img/super6.webp);
 }
 #block4 .gallery .gallery-box.img7{
-	background-image: url(img/super7.jpg);
+	background-image: url(img/Comprressed/super7.png);
 }
 #block4 .gallery .gallery-box.img8{
 	background-image: url(img/super8.webp);
 }
 #block4 .gallery .gallery-box.img9{
-	background-image: url(img/super9.png);
+	background-image: url(img/Comprressed/super9.png);
 }
 #block4 .gallery .gallery-box.img10{
 	background-image: url(img/super10.webp);
 }
 #block4 .gallery .gallery-box.img11{
-	background-image: url(img/super11.jpg);
+	background-image: url(img/Comprressed/super11.png);
 }
 #block4 .gallery .gallery-box.img12{
-	background-image: url(img/super12.jpg);
+	background-image: url(img/Comprressed/super12.png);
 }
 #block4 .gallery .gallery-box.img13{
-	background-image: url(img/super13.png);
+	background-image: url(img/Comprressed/super13.png);
 }
 #block4 .gallery .gallery-box.img14{
 	background-image: url(img/super14.webp);
 }
 #block4 .gallery .gallery-box.img15{
-	background-image: url(img/super15.png);
+	background-image: url(img/Comprressed/super15.png);
 }
 #block4 .gallery .gallery-box.img16{
 	background-image: url(img/super16.webp);
@@ -400,13 +405,13 @@ tab{
 	background-image: url(img/super17.webp);
 }
 #block4 .gallery .gallery-box.img18{
-	background-image: url(img/super18.png);
+	background-image: url(img/Comprressed/super18.png);
 }
 #block4 .gallery .gallery-box.img19{
 	background-image: url(img/super19.webp);
 }
 #block4 .gallery .gallery-box.img20{
-	background-image: url(img/super20.jpg);
+	background-image: url(img/Comprressed/super20.png);
 }
 #block4 .gallery .gallery-box.img21{
 	background-image: url(img/super21.webp);
@@ -508,6 +513,16 @@ tab{
 	100%{
 		transform: translateX(0);
 	}
+}
+@keyframes change-z-o{
+	0% {z-index: 2;}
+	99%{z-index: 1;}
+	100%{z-index: 0;}
+}
+@keyframes change-z-i{
+	0% {z-index: 0;}
+	1%{z-index: 1;}
+	100%{z-index: 2;}
 }
 @media (max-width: 800px) {
 	#block1 .title-img:nth-child(1){
