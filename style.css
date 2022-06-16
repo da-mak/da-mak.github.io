@@ -143,7 +143,8 @@ tab{
 }
 #block1 .title-btn{
 	color: #fff;
-	background-color: rgb(71, 173, 158);
+	background-color: rgb(56, 56, 56, 0.5);
+
 }
 #block1 .title-btn:hover{
 	color: #a8a8a8;
@@ -478,7 +479,7 @@ tab{
 	background-color: #333;
 }
 ::-webkit-scrollbar-thumb:hover{
-	background-color: #f00;
+	background-color: #6b6b6b;
 }
 @keyframes pulsing{
 	0%{
